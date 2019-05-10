@@ -51,6 +51,8 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-
+dist/
 node_modules/
-data/
+typedoc/
+package-lock.json
+lerna-debug.log
