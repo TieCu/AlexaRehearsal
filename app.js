@@ -1,5 +1,6 @@
 const Alexa = require('ask-sdk-core');
 
+//Default Launching Behavior for the Skill
 const LaunchRequestHandler = {
     canHandle(handlerInput){
         return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
@@ -8,9 +9,23 @@ const LaunchRequestHandler = {
         const speakOutput = 'Welcome to Let\'s Rehearse';
 
         return handlerInput.responseBuilder(speakOutput).getResponse();
-    }
+    },
 }
 
+
+//Request to end the session handler
+const SessionEndedRequestHandler = {
+    canHandle(handlerInput){
+        return handlerInput.requestEnvelope.request.type === 'SessionEndedRequest';
+    },
+    handle(handlerInput) {
+        console.log(`Session ended with reason: ${handlerInput.requestEnvelope.request.reason}`);
+    
+        return handlerInput.responseBuilder.getResponse();
+    },
+}
+
+//Catch all for errors and everything that gets missed by the rest of the handlers
 const ErrorHandler = {
     canHandle(handlerInput){
         return true;
@@ -19,14 +34,16 @@ const ErrorHandler = {
         console.log('ERROR MESSAGE: $(error.message)');
         console.log(error.trace);
         return handlerInput.responseBuilder.speak('Sorry I can\'t understand the command. Please say again.');
-    }
+    },
 }
 
+//adding all of the methods
 const skillBuilder = Alexa.SkillBuilders.custom();
 
 exports.handler = skillBuilder
     .addRequestHandlers(
-        LaunchRequestHandler
+        LaunchRequestHandler,
+        SessionEndedRequestHandler,
     )
     .addErrorHandlers(ErrorHandler)
     .lamda();
