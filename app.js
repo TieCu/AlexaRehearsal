@@ -12,6 +12,51 @@ const LaunchRequestHandler = {
     },
 }
 
+const SaveSceneHandler = {
+    canHandle(handlerInput){
+        return handlerInput.requestEnvelope.request.type === 'NewSceneIntent';
+    },
+    handle(handlerInput){
+        const speech = "Please read off the scene that you would like to store, ";
+
+    }
+}
+
+const RehearseSceneHandler = {
+    canHandle(handlerInput){
+        return handlerInput.requestEnvelope.request.type === 'RehearseIntent';
+    },
+    handle(handlerInput){
+
+    }
+}
+
+const HearSceneHandler = {
+    canHandle(handlerInput){
+        return handlerInput.requestEnvelope.request.type === 'ReviewSceneIntent';
+    },
+    handle(handlerInput){
+
+    }
+}
+
+const DeleteSceneHandler = {
+    canHandle(handlerInput){
+        return handlerInput.requestEnvelope.request.type === 'DeleteSceneIntent';
+    },
+    handle(handlerInput){
+
+    }
+}
+
+const EditSceneHandler = {
+    canHandle(handlerInput){
+        return handlerInput.requestEnvelope.request.type === "EditSceneIntent";
+    },
+    handle(handlerInput){
+
+    }
+}
 
 //Request to end the session handler
 const SessionEndedRequestHandler = {
