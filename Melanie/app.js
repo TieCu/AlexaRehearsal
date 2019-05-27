@@ -39,6 +39,7 @@ const RandomRollHandler = {
         }
 
         allRollsText += '. For a total of ' + totalCount;
+        console.log(allRollsText);
 
         return handlerInput.responseBuilder(allRollsText).getResponse();
 
