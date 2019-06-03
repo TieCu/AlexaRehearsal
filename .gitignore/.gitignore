@@ -52,7 +52,7 @@ Mkfile.old
 dkms.conf
 
 dist/
-node_modules/
+.node_modules/
 typedoc/
 package-lock.json
 lerna-debug.log
