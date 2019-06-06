@@ -112,12 +112,12 @@ const StrengthTypeIntent = {
     
         if(nextIntent === STRENGTH_TYPE){
             return handlerInput.responseBuilder
-            .speak("You should be a barbarian")
+            .speak("You should be a barbarian. Barbarians go into rages and lead their team into battle.")
             .getResponse();
         }
         
         return handlerInput.responseBuilder
-            .speak("You should be a fighter")
+            .speak("You should be a fighter. Fighters can use a variety of attacks to outsmart their opponents.")
             .getResponse();
     },
 };
@@ -135,12 +135,12 @@ const DexterityTypeIntent = {
     
         if(nextIntent === DEXTERITY_TYPE){
             return handlerInput.responseBuilder
-            .speak("You should be a monk")
+            .speak("You should be a monk. Monks use their mastery of spiritual energies to kill their oppenents, while they dodge enemy attacks.")
             .getResponse();
         }
         
         return handlerInput.responseBuilder
-            .speak("You should be a rogue")
+            .speak("You should be a rogue. Rogues wait in the shadows to pounce on unexpecting foes.")
             .getResponse();
     },
 };
@@ -220,21 +220,21 @@ const ArcaneMeleeTypeIntent = {
     
         if(nextIntent === ARCANE_FIGHTER){
             return handlerInput.responseBuilder
-            .speak("You should be a fighter")
+            .speak("You should be a fighter. Fighters can use a variety of attacks to outsmart their opponents.")
             .getResponse();
         }
         else if (nextIntent === ARCANE_ROGUE){
             return handlerInput.responseBuilder
-            .speak("You should be a rogue")
+            .speak("You should be a rogue. Rogues wait in the shadows to pounce on unexpecting foes.")
             .getResponse();
         }
         else if (nextIntent === ARCANE_MONK){
             return handlerInput.responseBuilder
-            .speak("You should be a monk")
+            .speak("You should be a monk. Monks use their mastery of spiritual energies to kill their oppenents, while they dodge enemy attacks.")
             .getResponse();
         }
         return handlerInput.responseBuilder
-            .speak("You should be a bard")
+            .speak("You should be a bard. Bards are generalists, choosing their abilities as their situations require.")
             .getResponse();
     },
 };
@@ -250,22 +250,23 @@ const ArcaneRangedTypeIntent = {
         
         let nextIntent = handlerInput.requestEnvelope.request.intent.slots.arcaneRanged.value;
     
-        if(nextIntent === MAGIC_TYPE){
+        if(nextIntent === ARCANE_FIEND){
             return handlerInput.responseBuilder
-            .addDelegateDirective({
-                name: 'StrengthTypeIntent',
-                confirmationStatus: 'NONE',
-                slots: {}
-            })
+            .speak("You should be a warlock. Warlocks pray to fiends to recieve large bursts of power.")
             .getResponse();
         }
-        
+        else if (nextIntent === ARCANE_TRAINING){
+            return handlerInput.responseBuilder
+            .speak("You should be a wizard. Wizards know a large number of spells to do things such as teleport, cast fireballs, or enhance their allies.")
+            .getResponse();
+        }
+        else if (nextIntent === ARCANE_BLOODLINE){
+            return handlerInput.responseBuilder
+            .speak("You should be a sorcerer. Sorcerers modify their spells to change how they attack foes or assist their friends.")
+            .getResponse();
+        }
         return handlerInput.responseBuilder
-            .addDelegateDirective({
-                name: 'DexterityTypeIntent',
-                confirmationStatus: 'NONE',
-                slots: {}
-            })
+            .speak("You should be a bard. Bards are generalists, choosing their abilities as their situations require.")
             .getResponse();
     },
 };
@@ -314,12 +315,12 @@ const NatureTypeIntent = {
     
         if(nextIntent === RANGER_TYPE){
             return handlerInput.responseBuilder
-            .speak("You should be a ranger")
+            .speak("You should be a ranger. Rangers can use magic to heal allies or shoot arrows into their enemies from afar.")
             .getResponse();
         }
         
         return handlerInput.responseBuilder
-            .speak("You should be a druid")
+            .speak("You should be a druid. Druids can use the power of nature to harm their foes, heal their friends, or turn into beasts.")
             .getResponse();
     },
 };
@@ -337,12 +338,12 @@ const HolyTypeIntent = {
     
         if(nextIntent === PALADIN_TYPE){
             return handlerInput.responseBuilder
-            .speak("You should be a paladin")
+            .speak("You should be a paladin. Paladins use magic to heal their allies, smite oppenents with the power of gods, or use auras to buff all nearby allies.")
             .getResponse();
         }
         
         return handlerInput.responseBuilder
-            .speak("You should be a cleric")
+            .speak("You should be a cleric. Clerics use holy powers from the gods to meet the demands of any situation.")
             .getResponse();
     },
 };
@@ -418,6 +419,9 @@ const ARCANE_RANGE = "melee";
 const ARCANE_FIGHTER = "combat prowess";
 const ARCANE_ROGUE = "attack from the shadows";
 const ARCANE_MONK = "spiritual master";
+const ARCANE_FIEND = "fiend";
+const ARCANE_TRAINING = "training";
+const ARCANE_BLOODLINE = "bloodline";
 const NATURE_TYPE = "nature";
 const RANGER_TYPE = "have a pet animal";
 const PALADIN_TYPE = "auras";

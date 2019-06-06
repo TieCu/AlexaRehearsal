@@ -30,6 +30,8 @@
                             "name": "hasMagic",
                             "type": "HasMagic",
                             "samples": [
+                                "I want to have {hasMagic} abilities",
+                                "I'd prefer {hasMagic}",
                                 "{hasMagic}"
                             ]
                         }
@@ -65,6 +67,8 @@
                             "name": "strength",
                             "type": "StrengthType",
                             "samples": [
+                                "use {strength}",
+                                "enter a {strength}",
                                 "I like {strength}",
                                 "I prefer {strength}",
                                 "{strength}"
@@ -80,11 +84,11 @@
                             "name": "dexterity",
                             "type": "DexterityType",
                             "samples": [
+                                "i want to use {dexterity}",
                                 "{dexterity}",
                                 "I like {dexterity}",
                                 "I'd prefer {dexterity}",
-                                "I prefer {dexterity}",
-                                "{dexterity} master"
+                                "I prefer {dexterity}"
                             ]
                         }
                     ],
@@ -97,6 +101,8 @@
                             "name": "magic",
                             "type": "MagicType",
                             "samples": [
+                                "cast {magic} magic",
+                                "I want to use {magic} magic",
                                 "I want to cast {magic}",
                                 "{magic}"
                             ]
@@ -111,6 +117,7 @@
                             "name": "arcane",
                             "type": "ArcaneType",
                             "samples": [
+                                "from {arcane}",
                                 "I want to cast in {arcane}",
                                 "I want to cast at {arcane}",
                                 "I want to cast {arcane}",
@@ -136,12 +143,14 @@
                     "samples": []
                 },
                 {
-                    "name": "ArcaneRangedIntent",
+                    "name": "ArcaneRangedTypeIntent",
                     "slots": [
                         {
                             "name": "arcaneRanged",
                             "type": "ArcaneRangedType",
                             "samples": [
+                                "my own {arcaneRanged}",
+                                "my {arcaneRanged}",
                                 "From {arcaneRanged}",
                                 "I got my magic from {arcaneRanged}",
                                 "{arcaneRanged}"
@@ -157,6 +166,7 @@
                             "name": "divine",
                             "type": "DivineType",
                             "samples": [
+                                "cast {divine} magic",
                                 "I like {divine} magic",
                                 "I want to cast {divine} magic",
                                 "{divine}"
@@ -187,6 +197,7 @@
                             "name": "holy",
                             "type": "HolyType",
                             "samples": [
+                                "i want to use {holy}",
                                 "I want to be a {holy}",
                                 "I want to specialize in {holy}",
                                 "{holy}"
@@ -292,10 +303,7 @@
                     "values": [
                         {
                             "name": {
-                                "value": "ranged",
-                                "synonyms": [
-                                    "range"
-                                ]
+                                "value": "range"
                             }
                         },
                         {
@@ -523,7 +531,7 @@
                     ]
                 },
                 {
-                    "name": "ArcaneRangedIntent",
+                    "name": "ArcaneRangedTypeIntent",
                     "confirmationRequired": false,
                     "prompts": {},
                     "slots": [
@@ -613,7 +621,7 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "Do you prefer to use strength, use brute force, or dexterity, fast and flexible movements?"
+                        "value": "Do you prefer to use strength, i e brute force, or dexterity, i e fast and flexible movements?"
                     }
                 ]
             },
@@ -622,7 +630,7 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "Do you prefer to rage to destroy your enemies or use combat prowess to outsmart your opponent?"
+                        "value": "Do you prefer to enter a rage or use combat prowess to defeat your opponent?"
                     }
                 ]
             },
@@ -667,7 +675,7 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "Do you prefer to fight based on your combat prowess, attacking from the shadows, to be a spiritual master, or be a jack of all trades?"
+                        "value": "Do you prefer to fight based on your combat prowess, attack from the shadows, to be a spiritual master, or be a jack of all trades?"
                     }
                 ]
             },
