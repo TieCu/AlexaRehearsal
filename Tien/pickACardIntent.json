@@ -1,0 +1,51 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "choose a card",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "RandomCardIntent",
+                    "slots": [],
+                    "samples": [
+                        "give me a random card from choose a card"
+                    ]
+                },
+                {
+                    "name": "RandomRedCardIntent",
+                    "slots": [],
+                    "samples": [
+                        "give me a random red card from choose a card"
+                    ]
+                },
+                {
+                    "name": "RandomBlackCardIntent",
+                    "slots": [],
+                    "samples": [
+                        "give me a random black card from choose a card"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
