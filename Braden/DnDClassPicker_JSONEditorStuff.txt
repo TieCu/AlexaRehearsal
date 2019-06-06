@@ -1,0 +1,712 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "class picker",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "PickClassIntent",
+                    "slots": [
+                        {
+                            "name": "hasMagic",
+                            "type": "HasMagic",
+                            "samples": [
+                                "{hasMagic}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "pick a {hasMagic} class",
+                        "pick a class",
+                        "find a good class for me",
+                        "pick me a class",
+                        "pick a class for me"
+                    ]
+                },
+                {
+                    "name": "PhysicalTypeIntent",
+                    "slots": [
+                        {
+                            "name": "physical",
+                            "type": "PhysicalType",
+                            "samples": [
+                                "I like {physical}",
+                                "I'd prefer {physical}",
+                                "I'd prefer to us {physical}",
+                                "{physical}"
+                            ]
+                        }
+                    ],
+                    "samples": []
+                },
+                {
+                    "name": "StrengthTypeIntent",
+                    "slots": [
+                        {
+                            "name": "strength",
+                            "type": "StrengthType",
+                            "samples": [
+                                "I like {strength}",
+                                "I prefer {strength}",
+                                "{strength}"
+                            ]
+                        }
+                    ],
+                    "samples": []
+                },
+                {
+                    "name": "DexterityTypeIntent",
+                    "slots": [
+                        {
+                            "name": "dexterity",
+                            "type": "DexterityType",
+                            "samples": [
+                                "{dexterity}",
+                                "I like {dexterity}",
+                                "I'd prefer {dexterity}",
+                                "I prefer {dexterity}",
+                                "{dexterity} master"
+                            ]
+                        }
+                    ],
+                    "samples": []
+                },
+                {
+                    "name": "MagicTypeIntent",
+                    "slots": [
+                        {
+                            "name": "magic",
+                            "type": "MagicType",
+                            "samples": [
+                                "I want to cast {magic}",
+                                "{magic}"
+                            ]
+                        }
+                    ],
+                    "samples": []
+                },
+                {
+                    "name": "ArcaneTypeIntent",
+                    "slots": [
+                        {
+                            "name": "arcane",
+                            "type": "ArcaneType",
+                            "samples": [
+                                "I want to cast in {arcane}",
+                                "I want to cast at {arcane}",
+                                "I want to cast {arcane}",
+                                "{arcane}"
+                            ]
+                        }
+                    ],
+                    "samples": []
+                },
+                {
+                    "name": "ArcaneMeleeTypeIntent",
+                    "slots": [
+                        {
+                            "name": "arcaneMelee",
+                            "type": "ArcaneMeleeType",
+                            "samples": [
+                                "I want to be {arcaneMelee}",
+                                "I prefer being {arcaneMelee}",
+                                "{arcaneMelee}"
+                            ]
+                        }
+                    ],
+                    "samples": []
+                },
+                {
+                    "name": "ArcaneRangedIntent",
+                    "slots": [
+                        {
+                            "name": "arcaneRanged",
+                            "type": "ArcaneRangedType",
+                            "samples": [
+                                "From {arcaneRanged}",
+                                "I got my magic from {arcaneRanged}",
+                                "{arcaneRanged}"
+                            ]
+                        }
+                    ],
+                    "samples": []
+                },
+                {
+                    "name": "DivineTypeIntent",
+                    "slots": [
+                        {
+                            "name": "divine",
+                            "type": "DivineType",
+                            "samples": [
+                                "I like {divine} magic",
+                                "I want to cast {divine} magic",
+                                "{divine}"
+                            ]
+                        }
+                    ],
+                    "samples": []
+                },
+                {
+                    "name": "NatureTypeIntent",
+                    "slots": [
+                        {
+                            "name": "nature",
+                            "type": "NatureType",
+                            "samples": [
+                                "I'd {nature}",
+                                "I want to {nature}",
+                                "{nature}"
+                            ]
+                        }
+                    ],
+                    "samples": []
+                },
+                {
+                    "name": "HolyTypeIntent",
+                    "slots": [
+                        {
+                            "name": "holy",
+                            "type": "HolyType",
+                            "samples": [
+                                "I want to be a {holy}",
+                                "I want to specialize in {holy}",
+                                "{holy}"
+                            ]
+                        }
+                    ],
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "HasMagic",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "physical"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "magical",
+                                "synonyms": [
+                                    "magic"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "PhysicalType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "dexterity",
+                                "synonyms": [
+                                    "dexterous"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "strength",
+                                "synonyms": [
+                                    "strong"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "StrengthType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "combat prowess",
+                                "synonyms": [
+                                    "combat"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "rage"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "DexterityType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "daggers"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ki"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MagicType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "divine",
+                                "synonyms": [
+                                    "divinity"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "arcane"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ArcaneType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "ranged",
+                                "synonyms": [
+                                    "range"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "melee"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ArcaneMeleeType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "jack of all trades"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "spiritual master",
+                                "synonyms": [
+                                    "ki"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "attack from the shadows",
+                                "synonyms": [
+                                    "shadows"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "combat prowess"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ArcaneRangedType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "music"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bloodline"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "training"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fiend"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "DivineType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "holy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "nature"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "NatureType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "have a pet animal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "turn into an animal"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "HolyType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "generalist"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "auras"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "PickClassIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "hasMagic",
+                            "type": "HasMagic",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.637970882073.1053346739369"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "PhysicalTypeIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "physical",
+                            "type": "PhysicalType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.143592321130.1310172211171"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "StrengthTypeIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "strength",
+                            "type": "StrengthType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.269149166329.488328067988"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "DexterityTypeIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "dexterity",
+                            "type": "DexterityType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.288895495367.490368755676"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MagicTypeIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "magic",
+                            "type": "MagicType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1134432025006.326781053028"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ArcaneTypeIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "arcane",
+                            "type": "ArcaneType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1001801511597.745670421448"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ArcaneMeleeTypeIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "arcaneMelee",
+                            "type": "ArcaneMeleeType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1040152255804.1204872621554"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ArcaneRangedIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "arcaneRanged",
+                            "type": "ArcaneRangedType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.185885955331.1351141888720"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "DivineTypeIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "divine",
+                            "type": "DivineType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.563818254717.495225333664"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "NatureTypeIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "nature",
+                            "type": "NatureType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.446770942480.1132160573807"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "HolyTypeIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "holy",
+                            "type": "HolyType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1551371360075.681095975834"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.538737349024.204422945589",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Which would you prefer a spell caster or a fighter?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.637970882073.1053346739369",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you prefer magical or physical abilities?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.143592321130.1310172211171",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you prefer to use strength, use brute force, or dexterity, fast and flexible movements?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.269149166329.488328067988",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you prefer to rage to destroy your enemies or use combat prowess to outsmart your opponent?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.288895495367.490368755676",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you want to use ki or daggers?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.1134432025006",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you want to cast arcane or divine magic?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1134432025006.326781053028",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you want to cast arcane magic, such as fire and lightning, or divine magic, such as healing or resurrection magic?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1001801511597.745670421448",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you want to cast your spells in melee or from range?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1040152255804.1204872621554",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you prefer to fight based on your combat prowess, attacking from the shadows, to be a spiritual master, or be a jack of all trades?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.185885955331.1351141888720",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Where did you get your magic power from, a powerful fiend, your own training, your bloodline, or from music?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.563818254717.495225333664",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you want to cast nature or holy magic?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.446770942480.1132160573807",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you want to turn into an animal or have a pet animal?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1551371360075.681095975834",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you want to specialize in auras or be a generalist?"
+                    }
+                ]
+            }
+        ]
+    }
+}
