@@ -116,7 +116,7 @@ const StatRollHandler = {
 const ComplementaryColorHandler = {
     canHandle(handlerInput){
         return handlerInput.requestEnvelope.request.type === 'IntentRequest'
-        && handlerInput.requestEnvelope.request.intent.name === 'StatRollIntent'
+        && handlerInput.requestEnvelope.request.intent.name === 'ComplementaryColorIntent'
     },
     handle(handlerInput){
         var r = Math.min(255, handlerInput.requestEnvelope.request.intent.slots.Red);
